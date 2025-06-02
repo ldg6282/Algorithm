@@ -6,14 +6,12 @@ function solution(people, limit) {
     
     while (low <= high) {
         if (arr[low] + arr[high] <= limit) {
-            count++;
             low++;
             high--
-        }
-        if (arr[low] + arr[high] > limit) {
-            count++;
+        } else {
             high--;
         }
+        count++;
     }
     
     return count;
